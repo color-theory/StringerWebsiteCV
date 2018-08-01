@@ -1,0 +1,9 @@
+{
+  "name": "stringerWebsiteCV",
+  "version": "1.0.0",
+  "description": "A Website for my CV",
+  "main": "index.js",
+  "repository": "https://github.com/subcogitate/StringerWebsiteCV.git",
+  "author": "Subcogitate <jgstringer@gmail.com>",
+  "license": "MIT"
+}
