@@ -1,5 +1,14 @@
-import * as React from 'react';
+import * as React from 'react'
 import ReactDOM from 'react-dom';
+import { MainApp } from './Main/app';
 
-const element = <h1>Hello, world</h1>;
-ReactDOM.render(element, document.getElementById('app'));
+document.addEventListener('DOMContentLoaded', () => {
+    const render = (Component) => {
+        ReactDOM.render(
+            <Component />,
+            document.getElementById('MainApp'),
+        )
+    }
+
+    render(MainApp)
+})
