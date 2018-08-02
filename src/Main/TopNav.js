@@ -4,8 +4,8 @@ import styles from '../styles/main.less';
 
 const myNav =[
     {text:'About Me', url:'about'},
-    {text:'Tech', url:'tech'},
     {text:'Education', url:'edu'},
+    {text:'Tech', url:'tech'},
     {text:'Links', url:'links'},
     {text:'Contact', url:'contact'}
 ]
