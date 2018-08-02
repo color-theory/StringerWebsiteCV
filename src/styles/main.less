@@ -3,9 +3,28 @@ body{
     .mainApp{
         max-width:800px;
         width: 100%;
-        border-bottom: 5px solid #222;
-        h1{
-            font-family: 'Merriweather', 'Times New Roman', Times, serif;
+        header{
+            float:left;
+            border-bottom: 5px solid #222;
+            margin-bottom: 15px;
+            width: 100%;
+            h1{
+                font-family: 'Merriweather', 'Times New Roman', Times, serif;
+                float: left;
+            }
+            ul.navList{
+                float: right;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    list-style-type: none;
+                    padding: 15px;
+                    float: left;
+                    a{
+                        color: #222;
+                    }
+                }
+            }
         }
     }
 }
