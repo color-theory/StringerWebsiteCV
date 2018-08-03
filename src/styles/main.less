@@ -3,13 +3,18 @@ body{
     .mainApp{
         max-width:800px;
         width: 100%;
+        h1, h2, h3, h4{
+            font-family: 'Merriweather', 'Times New Roman', Times, serif;
+        }
+        a, a:visited, a:active{
+            color: #222;        
+        }
         header{
             float:left;
             border-bottom: 5px solid #222;
             margin-bottom: 15px;
             width: 100%;
             h1{
-                font-family: 'Merriweather', 'Times New Roman', Times, serif;
                 float: left;
             }
             ul.navList{
@@ -18,14 +23,32 @@ body{
                 list-style-type: none;
                 li {
                     list-style-type: none;
-                    padding: 15px;
+                    padding: 15px 0 15px 15px;
                     float: left;
                     a{
                         color: #222;
                     }
+                    &.active{
+                        font-weight:bold;
+                    }
                 }
             }
         }
+        ul.techList{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            li{
+                flex-grow: 1;
+                flex-basis: auto;
+                width: 50%;
+            }
+        }
+        .mobileImgRight{
+            float: right;
+            width: 30%;
+            margin-left:15px;
+        }        
     }
 }
 
