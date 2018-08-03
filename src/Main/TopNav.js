@@ -8,7 +8,6 @@ const myNav =[
     {text:'Education', url:'/edu'},
     {text:'Tech', url:'/tech'},
     {text:'Links', url:'/links'},
-    {text:'Contact', url:'/contact'}
 ]
 const TopNavComponent = (props) => (
     <nav className={styles.topNavContainer}>
