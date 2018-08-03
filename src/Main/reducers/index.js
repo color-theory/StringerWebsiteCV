@@ -1,13 +1,14 @@
 import { SELECT_PAGE } from '../actions/actionTypes'
 
 const initialState = {
-    selectedPage: 'about'
+    selectedPage: '/about'
 }
+
 export function pageReducer(state = initialState, action) {
     switch (action.type) {
-        case SELECT_PAGE:
+        case '@@router/LOCATION_CHANGE':
             return Object.assign({}, state, {
-                selectedPage: action.pageName
+                selectedPage: action.payload.location.pathname
             })
         default:
             return state

@@ -1,3 +1,9 @@
 # StringerWebsiteCV
 
-A Website for my CV. It's more complicated than it needs to be in order to demonstrate knowledge.
+A Website to demonstrate knowledge. Tech used:
+
+* React
+* Redux
+* Babel
+* Webpack
+* Less
