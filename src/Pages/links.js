@@ -5,7 +5,7 @@ export class LinksComponent extends React.Component {
         return (
             <div>
                 <h2>External Links</h2>
-                <p>There are only a few here, but I thought they might be useful!</p>
+                <p>There are only a few here, but I thought they might be useful! Please feel free to contact me through either of the following pages.</p>
                 <ul>
                     <li><a href="https://github.com/subcogitate/">github</a></li>
                     <li><a href="https://www.linkedin.com/in/john-stringer-63780279/">linkedin</a></li>
