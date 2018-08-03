@@ -9,3 +9,4 @@ A Website to demonstrate knowledge. Tech used:
 * Less
 * Node
 * Yarn
+* Git Flow
