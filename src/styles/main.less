@@ -21,9 +21,15 @@ body{
                 float: right;
                 padding: 0;
                 list-style-type: none;
+                @media only screen and (max-width : 525px) {
+                    width: 100%;
+                }                
                 li {
                     list-style-type: none;
                     padding: 15px 0 15px 15px;
+                    @media only screen and (max-width : 525px) {
+                        padding: 15px 15px 15px 0;
+                    }
                     float: left;
                     a{
                         color: #222;

@@ -7,3 +7,5 @@ A Website to demonstrate knowledge. Tech used:
 * Babel
 * Webpack
 * Less
+* Node
+* Yarn
