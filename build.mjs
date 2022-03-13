@@ -4,7 +4,7 @@ import { lessLoader } from 'esbuild-plugin-less';
 build({
   entryPoints: ['src/index.js'],
   bundle: true,
-  outdir: 'dist/output.js',
+  outdir: 'dist',
   plugins: [lessLoader()],
   loader: {
     '.js': 'jsx',

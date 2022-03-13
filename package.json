@@ -1,16 +1,12 @@
 {
-  "name": "stringerWebsiteCV",
+  "name": "stringer-cv",
   "version": "2.0.0",
   "description": "A Website for my CV. It's more complicated than it needs to be in order to demonstrate knowledge.",
   "main": "index.js",
   "repository": "https://github.com/subcogitate/StringerWebsiteCV.git",
   "author": "ColorTheory <jgstringer@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development --history-api-fallback",
-    "build": "esbuild src/index.js --bundle --outfile=dist/out.js",
-    "start:prod": "cross-env NODE_ENV=production node server"
-  },
+  "scripts": {},
   "dependencies": {
     "connected-react-router": "^4.3.0",
     "cross-env": "^5.2.0",
