@@ -1,66 +1,66 @@
 body{
-    font-family: 'Open-Sans', sans-serif;
-    .mainApp{
-        max-width:800px;
-        width: 100%;
-        h1, h2, h3, h4{
-            font-family: 'Merriweather', 'Times New Roman', Times, serif;
-        }
-        a, a:visited, a:active{
-            color: #222;        
-        }
-        header{
-            float:left;
-            border-bottom: 5px solid #222;
-            margin-bottom: 15px;
-            width: 100%;
-            h1{
-                float: left;
-            }
-            ul.navList{
-                float: right;
-                padding: 0;
-                list-style-type: none;
-                @media only screen and (max-width : 525px) {
-                    width: 100%;
-                }                
-                li {
-                    list-style-type: none;
-                    padding: 15px 0 15px 15px;
-                    @media only screen and (max-width : 525px) {
-                        padding: 15px 15px 15px 0;
-                    }
-                    float: left;
-                    a{
-                        color: #222;
-                    }
-                    &.active{
-                        font-weight:bold;
-                    }
-                }
-            }
-        }
-        ul.techList{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            li{
-                flex-grow: 1;
-                flex-basis: auto;
-                width: 50%;
-            }
-        }
-        .mobileImgRight{
-            float: right;
-            width: 30%;
-            margin-left:15px;
-        }        
-    }
+	font-family: 'Open-Sans', sans-serif;
+	.mainApp{
+		max-width:800px;
+		width: 100%;
+		h1, h2, h3, h4{
+			font-family: 'Merriweather', 'Times New Roman', Times, serif;
+		}
+		a, a:visited, a:active{
+			color: #222;        
+		}
+		header{
+			float:left;
+			border-bottom: 5px solid #222;
+			margin-bottom: 15px;
+			width: 100%;
+			h1{
+				float: left;
+			}
+			ul.navList{
+				float: right;
+				padding: 0;
+				list-style-type: none;
+				@media only screen and (max-width : 525px) {
+					width: 100%;
+				}                
+				li {
+					list-style-type: none;
+					padding: 15px 0 15px 15px;
+					@media only screen and (max-width : 525px) {
+						padding: 15px 15px 15px 0;
+					}
+					float: left;
+					a{
+						color: #222;
+					}
+					&.active{
+						font-weight:bold;
+					}
+				}
+			}
+		}
+		ul.techList{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			li{
+				flex-grow: 1;
+				flex-basis: auto;
+				width: 50%;
+			}
+		}
+		.mobileImgRight{
+			float: right;
+			width: 30%;
+			margin-left:15px;
+		}        
+	}
 }
 
-.AppContainer{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items: center;
+.appContainer{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
 }

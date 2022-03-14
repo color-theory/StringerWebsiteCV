@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom'
-import styles from '../styles/main.less';
+import { Link, useLocation } from 'react-router-dom'
 
 const myNav =[
     {text:'About Me', url:'/about'},
@@ -8,12 +7,17 @@ const myNav =[
     {text:'Tech', url:'/tech'},
     {text:'Links', url:'/links'},
 ]
-const TopNavComponent = () => (
-    <nav className={styles.topNavContainer}>
-        <ul className={styles.navList}>
-            {myNav.map((item, index) => <li key={index} className={item.url==='/about' ? styles.active : ''}><Link to={item.url} >{item.text}</Link></li>)}
-        </ul>
-    </nav>
-)
+
+const TopNavComponent = () => {
+    const location = useLocation();
+
+    return (
+        <nav className={'topNavContainer'}>
+            <ul className={'navList'}>
+                {myNav.map((item, index) => <li key={index} className={(item.url===location.pathname || (item.url === '/about' && location.pathname === '/' )) ? 'active' : ''}><Link to={item.url} >{item.text}</Link></li>)}
+            </ul>
+        </nav>
+    );
+}
 
 export default TopNavComponent;

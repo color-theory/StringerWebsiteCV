@@ -1,39 +1,28 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MainApp } from './Main/app';
 import * as Pages from './Pages';
-import { createBrowserHistory } from 'history';
-
-
-const initialState = {}
-
-const history = createBrowserHistory()
-
-const store = createStore(
-  connectRouter(history)(),
-  initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  compose(
-    applyMiddleware(
-      routerMiddleware(history)
-    )
-  )
-)
 
 document.addEventListener('DOMContentLoaded', () => {
-    const render = (Component) => {
-        ReactDOM.render(
-            <Switch>
-                <Route path="/about" component={Pages.About} />
-                <Route path="/tech" component={Pages.Tech} />
-                <Route path="/edu" component={Pages.Edu} />
-                <Route path="/links" component={Pages.Links} />
-                <Route path="/contact" component={Pages.Contact} />
-                <Route component={Pages.About} />
-            </Switch>
-        )
-    }
+    const appContainer = document.getElementById( "MainAppEntry" );
 
-    render(MainApp)
+    const render = ( Component ) => {
+        const Entry = (
+            <BrowserRouter>
+                <Component>
+                    <Routes>
+                        <Route path="/about" element={<Pages.About />} />
+                        <Route path="/tech" element={<Pages.Tech />} />
+                        <Route path="/edu" element={<Pages.Edu />} />
+                        <Route path="/links" element={<Pages.Links />} />
+                        <Route path="/" element={<Pages.About />} />
+                    </Routes>
+                </Component>
+            </BrowserRouter>
+        );
+        ReactDOM.render(Entry, appContainer);
+    };
+
+    render(MainApp);
 })
