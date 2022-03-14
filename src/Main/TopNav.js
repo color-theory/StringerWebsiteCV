@@ -1,7 +1,5 @@
 import * as React from 'react';
-import {connect} from 'react-redux';
-import { Link } from 'react-router-dom'
-import styles from '../styles/main.less';
+import { Link, useLocation } from 'react-router-dom'
 
 const myNav =[
     {text:'About Me', url:'/about'},
@@ -9,16 +7,17 @@ const myNav =[
     {text:'Tech', url:'/tech'},
     {text:'Links', url:'/links'},
 ]
-const TopNavComponent = (props) => (
-    <nav className={styles.topNavContainer}>
-        <ul className={styles.navList}>
-            {myNav.map((item, index) => <li key={index} className={item.url===props.selectedPage ? styles.active : ''}><Link to={item.url} >{item.text}</Link></li>)}
-        </ul>
-    </nav>
-)
 
-const mapStateToProps = (state) => {
-    return { selectedPage: state.pageReducer.selectedPage };
-  };
+const TopNavComponent = () => {
+    const location = useLocation();
 
-export default connect(mapStateToProps)(TopNavComponent)
+    return (
+        <nav className={'topNavContainer'}>
+            <ul className={'navList'}>
+                {myNav.map((item, index) => <li key={index} className={(item.url===location.pathname || (item.url === '/about' && location.pathname === '/' )) ? 'active' : ''}><Link to={item.url} >{item.text}</Link></li>)}
+            </ul>
+        </nav>
+    );
+}
+
+export default TopNavComponent;
