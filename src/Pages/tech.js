@@ -10,6 +10,7 @@ export class TechComponent extends React.Component {
                     <li>JavaScript (ES7)</li>
                     <li>Typescript</li>
                     <li>React</li>
+                    <li>React Query</li>
                     <li>Redux</li>
                     <li>JSX</li>
                     <li>Git</li>
