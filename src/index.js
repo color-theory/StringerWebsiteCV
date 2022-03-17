@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MainApp } from './Main/app';
 import * as Pages from './Pages';
+import less from './styles/main.less';
 
 document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById( "MainAppEntry" );
